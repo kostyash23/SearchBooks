@@ -8,7 +8,7 @@ function fetchBooks(inputValue) {
     .then(response => response.json())
     .then(data => {
       booksItem = data.items;
-      console.log(booksItem);
+
       booksList.innerHTML = '';
       booksItem.map(el => {
         booksList.appendChild(createItem(el.volumeInfo.title));
